@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mihainoa ny Teny - Télécharger la dernière version APK (v2.0)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #8C1D40;
+      --primary-dark: #5C0D25;
+      --gold: #D4AF37;
+      --gold-light: #FFF8E7;
+      --surface: #FFFFFF;
+      --background: #FDF8F5;
+      --text-main: #1C1917;
+      --text-muted: #57534E;
+      --border: #E7E5E4;
+      --green: #15803D;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background: var(--background);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 24px 16px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 680px;
+      width: 100%;
+      background: var(--surface);
+      border-radius: 24px;
+      box-shadow: 0 10px 40px rgba(140, 29, 64, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .header {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: white;
+      padding: 36px 24px;
+      text-align: center;
+      position: relative;
+    }
+
+    .badge-v2 {
+      display: inline-block;
+      background: #D4AF37;
+      color: #3A1000;
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 6px 14px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .verse-card {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      border-radius: 16px;
+      padding: 16px 20px;
+      margin-top: 18px;
+      font-style: italic;
+    }
+
+    .verse-quote {
+      font-family: 'Cinzel', serif;
+      font-size: 1.05rem;
+      color: #FFF9E6;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .verse-ref {
+      font-size: 0.9rem;
+      color: var(--gold);
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .content {
+      padding: 32px 28px;
+    }
+
+    .download-section {
+      text-align: center;
+      margin-bottom: 32px;
+      padding: 24px;
+      background: var(--gold-light);
+      border-radius: 20px;
+      border: 2px dashed rgba(212, 175, 55, 0.6);
+    }
+
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #15803D 0%, #166534 100%);
+      color: white;
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-weight: 700;
+      padding: 18px 36px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(21, 128, 61, 0.35);
+      transition: all 0.2s ease;
+      cursor: pointer;
+      width: 100%;
+      max-width: 440px;
+    }
+
+    .btn-download:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(21, 128, 61, 0.45);
+    }
+
+    .file-meta {
+      margin-top: 12px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .highlight-card {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 14px 18px;
+      border-radius: 14px;
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+    }
+
+    .icon-box {
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
+    .highlight-text h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 2px;
+    }
+
+    .highlight-text p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .steps-card {
+      background: #FFF;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+
+    .steps-card h3 {
+      font-size: 1.05rem;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }
+
+    .steps-list {
+      padding-left: 20px;
+      font-size: 0.92rem;
+      color: var(--text-main);
+    }
+
+    .steps-list li {
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      padding: 20px;
+      background: #FAFAF9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <span class="badge-v2">Dernière Version 2.0 (Finale)</span>
+      <h1>Mihainoa ny Teny</h1>
+      <p style="opacity: 0.9; font-size: 0.95rem;">Application Biblique Trilingue & Prédications de Solohery RAKOTOARISOA</p>
+
+      <div class="verse-card">
+        <div class="verse-quote">« Ny lanitra sy ny tany ho levona, fa ny teniko tsy mba ho levona. »</div>
+        <div class="verse-ref">— Marka 13.31</div>
+      </div>
+    </div>
+
+    <div class="content">
+      <!-- Zone de téléchargement -->
+      <div class="download-section">
+        <a href="/mihainoa-ny-teny.apk" class="btn-download" download="mihainoa-ny-teny.apk">
+          📥 Télécharger l'APK v2.0
+        </a>
+        <div class="file-meta">
+          <strong>Fichier :</strong> mihainoa-ny-teny.apk &bull; <strong>Taille :</strong> ~34 Mo &bull; <strong>Statut :</strong> 100% Hors-ligne
+        </div>
+      </div>
+
+      <!-- Instruction essentielle pour remplacer l'ancienne version -->
+      <div class="steps-card">
+        <h3>⚠️ Comment bien remplacer l'ancienne version sur votre téléphone :</h3>
+        <ol class="steps-list">
+          <li><strong>Désinstallez l'ancienne version</strong> présente sur votre smartphone si vous l'aviez déjà installée (pour éviter tout conflit de signature ou de cache).</li>
+          <li>Cliquez sur le gros bouton vert <strong>« Télécharger l'APK v2.0 »</strong> ci-dessus.</li>
+          <li>Ouvrez le fichier <code>mihainoa-ny-teny.apk</code> téléchargé dans votre gestionnaire de fichiers.</li>
+          <li>Appuyez sur <strong>Installer</strong>. L'application s'ouvre avec la version 2.0 complète !</li>
+        </ol>
+      </div>
+
+      <!-- Points forts de cette version -->
+      <div class="highlights">
+        <div class="highlight-card">
+          <div class="icon-box">📖</div>
+          <div class="highlight-text">
+            <h3>3 Bibles Complètes (93 303 Versets - 0 verset manquant)</h3>
+            <p>Malagasy Baiboly Protestanta (31 099 versets), Louis Segond 1910 (31 102 versets), King James Version (31 102 versets). 100% hors-ligne !</p>
+          </div>
+        </div>
+
+        <div class="highlight-card">
+          <div class="icon-box">🕊️</div>
+          <div class="highlight-text">
+            <h3>Verset Thématique & Logo Officiel</h3>
+            <p>Verset gravé sur le logo et l'écran d'accueil : <em>« Ny lanitra sy ny tany ho levona, fa ny teniko tsy mba ho levona. » _Marka 13.31</em></p>
+          </div>
+        </div>
+
+        <div class="highlight-card">
+          <div class="icon-box">✍️</div>
+          <div class="highlight-text">
+            <h3>Écrits & Sermons de Solohery RAKOTOARISOA</h3>
+            <p>Bibliothèque complète d'enseignements spirituels, prédications et méditations avec lecteur audio intégré.</p>
+          </div>
+        </div>
+
+        <div class="highlight-card">
+          <div class="icon-box">⚖️</div>
+          <div class="highlight-text">
+            <h3>Comparateur Parallèle & Recherche Instantanée</h3>
+            <p>Comparaison simultanée des 3 versions et recherche rapide sur l'ensemble des 66 livres.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lien secondaire de secours -->
+      <div style="text-align: center; margin-top: 10px;">
+        <span style="font-size: 0.85rem; color: var(--text-muted);">Lien miroir direct : </span>
+        <a href="/app-debug.apk" style="font-size: 0.85rem; color: var(--primary); font-weight: 600;" download="mihainoa-ny-teny-v2.apk">Télécharger app-debug.apk</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      Mihainoa ny Teny &bull; Solohery RAKOTOARISOA &bull; <em>« Ny lanitra sy ny tany ho levona, fa ny teniko tsy mba ho levona. » Marka 13.31</em>
+    </div>
+  </div>
+
+</body>
+</html>
